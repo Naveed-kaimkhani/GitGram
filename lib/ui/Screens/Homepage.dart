@@ -1,3 +1,4 @@
+import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:provider/provider.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
 import 'package:flutter/material.dart';
@@ -42,9 +43,8 @@ class _HomepageState extends State<Homepage> {
                 child: TextFormField(
                   controller: _controller,
                   decoration: new InputDecoration(
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: GestureDetector(child: Icon(Icons.search),onTap: ()=>AppRoutes.reposs,),
                     suffixIcon: Icon(Icons.cancel),
-                   // icon: Icon(Icons.search,color: Colors.white,),
                     focusColor: Colors.white,
                     hoverColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.white),

@@ -13,7 +13,7 @@ class myApp extends StatelessWidget {
       create:(_)=>Userprovider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: "Easy Git",
+        title: "Gitbook",
         theme: ThemeData(
           primarySwatch: Colors.blue,
         brightness: Brightness.dark 

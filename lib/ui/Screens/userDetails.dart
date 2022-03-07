@@ -1,5 +1,6 @@
 import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
+import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
 import 'package:easy_github/ui/Screens/repoview.dart';
 import 'package:flutter/material.dart';
@@ -126,7 +127,11 @@ class userDetails extends StatelessWidget {
                   children: [
                     InkWell(
                       splashColor: Colors.grey[10],
-                      onTap: () {},
+                      onTap: () {
+                        print("heellooooooow");
+                        Navigator.of(context).pushNamed(AppRoutes.reposs);
+                        print("hiiiiiiii");
+                      },
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/hub.png'),
@@ -135,12 +140,20 @@ class userDetails extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("Repos",style: TextStyle(fontFamily: 'Itim',fontSize: 17,),),
-                    SizedBox(height: 10,)
+                    Text(
+                      "Repos",
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 17,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
                   ],
                 ),
               ),
-                SizedBox(
+              SizedBox(
                 width: 30,
               ),
               Material(
@@ -160,15 +173,21 @@ class userDetails extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    Text("About",style: TextStyle(fontFamily: 'Itim',fontSize: 17,),),
-                    SizedBox(height: 10,)
+                    Text(
+                      "About",
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 17,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
                   ],
                 ),
               ),
-          
             ])
           ],
         ));
-
   }
 }
