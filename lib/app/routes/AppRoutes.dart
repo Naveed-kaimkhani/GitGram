@@ -1,3 +1,4 @@
+import 'package:easy_github/ui/Screens/About.dart';
 import 'package:easy_github/ui/Screens/Errors.dart';
 import 'package:easy_github/ui/Screens/Homepage.dart';
 import 'package:easy_github/ui/Screens/repoview.dart';
@@ -11,7 +12,7 @@ class AppRoutes {
   static const String Repo_webview = '/webview';
   static const String ErrorScreen = '/Errors';
   static const String reposs='/repoview';
-
+static const String about='/About';
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
@@ -25,6 +26,8 @@ class AppRoutes {
         return _buildRoute(Errors(), settings);
         case reposs:
         return _buildRoute(repoview(), settings);
+        case about:
+        return _buildRoute(About(), settings);
         
       default:
         return _buildRoute(Scaffold(), settings);

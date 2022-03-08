@@ -164,7 +164,7 @@ class userDetails extends StatelessWidget {
                   children: [
                     InkWell(
                       splashColor: Colors.grey[10],
-                      onTap: () {},
+                      onTap: () =>Navigator.of(context).pushNamed(AppRoutes.about),
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/user.png'),
