@@ -1,6 +1,8 @@
 import 'package:easy_github/ui/Screens/About.dart';
 import 'package:easy_github/ui/Screens/Errors.dart';
 import 'package:easy_github/ui/Screens/Homepage.dart';
+import 'package:easy_github/ui/Screens/friends.dart';
+import 'package:easy_github/ui/Screens/frndview.dart';
 import 'package:easy_github/ui/Screens/repoview.dart';
 import 'package:easy_github/ui/Screens/userDetails.dart';
 import 'package:easy_github/ui/Screens/Repowebview.dart';
@@ -13,6 +15,7 @@ class AppRoutes {
   static const String ErrorScreen = '/Errors';
   static const String reposs='/repoview';
 static const String about='/About';
+static const String frnds='/friends';
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
@@ -28,6 +31,8 @@ static const String about='/About';
         return _buildRoute(repoview(), settings);
         case about:
         return _buildRoute(About(), settings);
+        case frnds:
+        return _buildRoute(frndview(), settings);
         
       default:
         return _buildRoute(Scaffold(), settings);

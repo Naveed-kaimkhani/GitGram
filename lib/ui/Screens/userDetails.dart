@@ -164,7 +164,8 @@ class userDetails extends StatelessWidget {
                   children: [
                     InkWell(
                       splashColor: Colors.grey[10],
-                      onTap: () =>Navigator.of(context).pushNamed(AppRoutes.about),
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(AppRoutes.about),
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/user.png'),
@@ -186,6 +187,40 @@ class userDetails extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(
+                width: 30,
+              ),
+              Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.grey[10],
+                child: Column(
+                  children: [
+                    InkWell(
+                      splashColor: Colors.grey[10],
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(AppRoutes.frnds),
+                      child: Ink.image(
+                        alignment: Alignment.bottomRight,
+                        image: AssetImage('lib/assets/friends.png'),
+                        height: 80,
+                        width: 80,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Text(
+                      "Friends",
+                      style: TextStyle(
+                        fontFamily: 'Itim',
+                        fontSize: 17,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    )
+                  ],
+                ),
+              )
             ])
           ],
         ));

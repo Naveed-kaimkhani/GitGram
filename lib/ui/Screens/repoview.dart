@@ -28,12 +28,12 @@ class _repoviewState extends State<repoview> {
             color: Colors.white,
           ),
           onTap: () => Navigator.of(context).pushNamed(AppRoutes.user_details),
-            
-            
         ),
-        title: Text(
-           " Repositories",
-          style: TextStyle(fontSize: 18, fontFamily: 'Itim'),
+        title: Center(
+          child: Text(
+            " Repositories",
+            style: TextStyle(fontSize: 18, fontFamily: 'Itim'),
+          ),
         ),
         actions: [],
       ),

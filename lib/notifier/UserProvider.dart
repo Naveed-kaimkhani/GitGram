@@ -2,6 +2,7 @@ import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/app/services.dart/GithubApi.dart';
+import 'package:easy_github/ui/Screens/friends.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +12,12 @@ class Userprovider extends ChangeNotifier {
   user_profile? _user;
   user_profile? get user => _user;
 
-  late List<repos?> _repo;
+   late List<repos?> _repo;
   List<repos?> get repo => _repo;
 
+ late List<friends?> _frnd;
+  List<friends?> get frnd=>_frnd;
+  
   bool isLoading = false;
   void setLoading(bool value) {
     isLoading = value;
@@ -56,20 +60,26 @@ class Userprovider extends ChangeNotifier {
 
       Navigator.of(context).pushNamed(AppRoutes.user_details);
     } 
-    // on NullThrownError {
-    //   Navigator.of(context).pushNamed(AppRoutes.ErrorScreen);
-    //}
-     catch (e) {
-      // SnackBar(
-      //   content: Text(e.toString()),
-      //   action: SnackBarAction(
-      //     label: 'Undo',
-      //     onPressed: () {
-      //       // Some code to undo the change.
-      //     },
-      //   ),
-      // );
+    catch (e) {
+      
+      setLoading(false);
+    }
+  }
 
+  
+  Future<void> getuserfrnds(
+      {String? username, required BuildContext context}) async {
+    setLoading(true);
+    try {
+      //_repo=await _githubapi.getUserRepos(username: username
+      final List<friends?> response =
+          await _githubapi.getUserfriends(username: username);
+      _frnd = response;
+
+      Navigator.of(context).pushNamed(AppRoutes.frnds);
+    } 
+    catch (e) {
+      print(e);
       setLoading(false);
     }
   }

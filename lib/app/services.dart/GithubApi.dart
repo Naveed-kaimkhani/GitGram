@@ -4,6 +4,7 @@ import 'package:easy_github/app/data/Endpoints.dart';
 import 'package:easy_github/app/data/dioclient.dart';
 import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
+import 'package:easy_github/ui/Screens/friends.dart';
 
 class GithubApi{
   DioClient _client =new DioClient();
@@ -24,6 +25,17 @@ class GithubApi{
         '${Endpoints.userprofile}/$username/${Endpoints.repos}'
       );
       return response.map((e) => repos.frommap(e)).toList();
+    } catch (e) {
+      throw e;
+    }
+  }
+
+  Future<List<friends?>> getUserfriends({String? username}) async{
+    try {
+      final List response=await _client.get(
+        '${Endpoints.userprofile}/$username/${Endpoints.friends}'
+      );
+      return response.map((e) => friends.frommap(e)).toList();
     } catch (e) {
       throw e;
     }

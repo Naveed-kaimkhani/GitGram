@@ -6,5 +6,6 @@ class Endpoints{
   static const int connectionTimeout=10000;
   static const String userprofile='/users';
   static const String repos='/repos';
+  static const String friends='/followers';
 
   }
