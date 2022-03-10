@@ -7,5 +7,6 @@ class Endpoints{
   static const String userprofile='/users';
   static const String repos='/repos';
   static const String friends='/followers';
+  static const String foling='/following';
 
   }

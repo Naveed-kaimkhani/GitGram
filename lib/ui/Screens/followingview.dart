@@ -1,18 +1,18 @@
+import 'package:easy_github/app/data/models/following.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
-import 'package:easy_github/ui/Screens/friends.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
-class frndview extends StatefulWidget {
+class followingview extends StatefulWidget {
   @override
-  State<frndview> createState() => _repoviewState();
+  State<followingview> createState() => _repoviewState();
 }
 
-class _repoviewState extends State<frndview> {
+class _repoviewState extends State<followingview> {
   @override
   Widget build(BuildContext context) {
-    List<friends?> userFrnds = context.watch<Userprovider>().frnd;
+    List<following?> userfollowing = context.watch<Userprovider>().foling;
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -29,17 +29,17 @@ class _repoviewState extends State<frndview> {
         //   ),
         //   title: Center(
         //     child: Text(
-        //       " Followers",
+        //       " Following",
         //       style: TextStyle(fontSize: 18, fontFamily: 'Itim'),
         //     ),
         //   ),
         //   actions: [],
         // ),
         body: ListView.builder(
-            itemCount: userFrnds.length,
+            itemCount: userfollowing.length,
             itemBuilder: (context, index) {
               return Column(
-                  children: userFrnds
+                  children: userfollowing
                       .map(
                         (e) => Padding(
                           padding: const EdgeInsets.all(8.0),

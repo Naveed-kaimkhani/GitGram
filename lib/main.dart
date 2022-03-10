@@ -12,6 +12,7 @@ class myApp extends StatelessWidget {
     return  ChangeNotifierProvider<Userprovider>(
       create:(_)=>Userprovider(),
       child: MaterialApp(
+        color: Colors.black,
         debugShowCheckedModeBanner: false,
         title: "Gitbook",
         theme: ThemeData(

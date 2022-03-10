@@ -1,3 +1,4 @@
+import 'package:easy_github/app/data/models/following.dart';
 import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
@@ -17,6 +18,9 @@ class Userprovider extends ChangeNotifier {
 
    late List<friends?> _frnd;
   List<friends?> get frnd=>_frnd;
+
+   late List<following?> _foling;
+  List<following?> get foling=>_foling;
   
   bool isLoading = false;
   void setLoading(bool value) {
@@ -87,4 +91,22 @@ print("_repo initialized");
     }
   }
   
+  Future<void> getuserfollowing(
+    
+      {String? username, required BuildContext context}) async {
+    setLoading(true);
+    try {
+      print("get user following call");
+      //_repo=await _githubapi.getUserRepos(username: username
+      final List<following?> response =
+          await _githubapi.getUserfolloing(username: username);
+      _foling = response;
+  print("_foling initialized ");
+      Navigator.of(context).pushNamed(AppRoutes.user_details);
+    } 
+    catch (e) {
+      print(e);
+      setLoading(false);
+    }
+  }
 }

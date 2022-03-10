@@ -28,6 +28,10 @@ class _HomepageState extends State<Homepage> {
       await context
           .read<Userprovider>()
           .getuserfrnd(username: _controller.text, context: context);
+
+           await context
+          .read<Userprovider>()
+          .getuserfollowing(username: _controller.text, context: context);
       print("in fetch user info func");
      
     }
@@ -91,6 +95,7 @@ class _HomepageState extends State<Homepage> {
   _appbar(){
    
     return AppBar(
+      backgroundColor: Colors.black,
       elevation: 0,
       brightness: Brightness.dark,
       centerTitle: true,

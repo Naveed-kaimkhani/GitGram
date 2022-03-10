@@ -12,12 +12,19 @@ class userDetails extends StatelessWidget {
     user_profile? userinfo = context.watch<Userprovider>().user;
 
     return Scaffold(
+    appBar: AppBar(
+      backgroundColor: Colors.black,
+      leading: GestureDetector(
+        child: Icon(Icons.arrow_back_ios),
+        onTap: () => AppRoutes.homepage,
+      ),
+    ),
         backgroundColor: Colors.black,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 40,
+              height: 0,
             ),
             ListTile(
                 isThreeLine: true,
@@ -163,8 +170,8 @@ class userDetails extends StatelessWidget {
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/user.png'),
-                        height: 70,
-                        width: 70,
+                        height: 80,
+                        width: 80,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -193,12 +200,12 @@ class userDetails extends StatelessWidget {
                     InkWell(
                       splashColor: Colors.grey[10],
                       onTap: () =>
-                          Navigator.of(context).pushNamed(AppRoutes.frnds),
+                          Navigator.of(context).pushNamed(AppRoutes.tabbarr),
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/friends.png'),
-                        height: 70,
-                        width: 70,
+                        height: 80,
+                        width: 80,
                         fit: BoxFit.cover,
                       ),
                     ),
