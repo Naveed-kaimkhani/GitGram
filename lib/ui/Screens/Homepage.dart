@@ -25,7 +25,11 @@ class _HomepageState extends State<Homepage> {
       await context
           .read<Userprovider>()
           .getuserRepo(username: _controller.text, context: context);
+      await context
+          .read<Userprovider>()
+          .getuserfrnd(username: _controller.text, context: context);
       print("in fetch user info func");
+     
     }
 
     return Scaffold(

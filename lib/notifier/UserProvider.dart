@@ -15,7 +15,7 @@ class Userprovider extends ChangeNotifier {
    late List<repos?> _repo;
   List<repos?> get repo => _repo;
 
- late List<friends?> _frnd;
+   late List<friends?> _frnd;
   List<friends?> get frnd=>_frnd;
   
   bool isLoading = false;
@@ -53,11 +53,12 @@ class Userprovider extends ChangeNotifier {
       {String? username, required BuildContext context}) async {
     setLoading(true);
     try {
+      print("in get user repo");
       //_repo=await _githubapi.getUserRepos(username: username
       final List<repos?> response =
           await _githubapi.getUserRepos(username: username);
       _repo = response;
-
+print("_repo initialized");
       Navigator.of(context).pushNamed(AppRoutes.user_details);
     } 
     catch (e) {
@@ -67,20 +68,23 @@ class Userprovider extends ChangeNotifier {
   }
 
   
-  Future<void> getuserfrnds(
+  Future<void> getuserfrnd(
+    
       {String? username, required BuildContext context}) async {
     setLoading(true);
     try {
+      print("get user frnds call");
       //_repo=await _githubapi.getUserRepos(username: username
       final List<friends?> response =
           await _githubapi.getUserfriends(username: username);
       _frnd = response;
-
-      Navigator.of(context).pushNamed(AppRoutes.frnds);
+  print("_frnd initialized ");
+      Navigator.of(context).pushNamed(AppRoutes.user_details);
     } 
     catch (e) {
       print(e);
       setLoading(false);
     }
   }
+  
 }

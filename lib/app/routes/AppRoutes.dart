@@ -15,7 +15,7 @@ class AppRoutes {
   static const String ErrorScreen = '/Errors';
   static const String reposs='/repoview';
 static const String about='/About';
-static const String frnds='/friends';
+static const String frnds='/frndview';
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:

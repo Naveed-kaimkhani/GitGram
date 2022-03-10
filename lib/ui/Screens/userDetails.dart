@@ -1,8 +1,6 @@
-import 'package:easy_github/app/data/models/repos.dart';
 import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
-import 'package:easy_github/ui/Screens/repoview.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
@@ -12,7 +10,6 @@ class userDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     user_profile? userinfo = context.watch<Userprovider>().user;
-    List<repos?> reposInfo = context.watch<Userprovider>().repo;
 
     return Scaffold(
         backgroundColor: Colors.black,

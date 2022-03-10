@@ -1,5 +1,4 @@
 import 'package:easy_github/app/data/models/repos.dart';
-import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +16,6 @@ class _repoviewState extends State<repoview> {
   @override
   Widget build(BuildContext context) {
     List<repos?> reposInfo = context.watch<Userprovider>().repo;
-    user_profile? user = context.watch<Userprovider>().user;
 
     return Scaffold(
       appBar: AppBar(

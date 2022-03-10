@@ -1,5 +1,3 @@
-import 'package:easy_github/app/data/models/repos.dart';
-import 'package:easy_github/app/data/models/user_profile.dart';
 import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
 import 'package:easy_github/ui/Screens/friends.dart';
@@ -7,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
 class frndview extends StatefulWidget {
-  String? name;
-  frndview({this.name});
+  String? login;
+  frndview({this.login});
 
   @override
   State<frndview> createState() => _repoviewState();
@@ -17,8 +15,6 @@ class frndview extends StatefulWidget {
 class _repoviewState extends State<frndview> {
   @override
   Widget build(BuildContext context) {
-    List<repos?> reposInfo = context.watch<Userprovider>().repo;
-    user_profile? user = context.watch<Userprovider>().user;
     List<friends?> userFrnds = context.watch<Userprovider>().frnd;
 
     return Scaffold(
@@ -57,7 +53,7 @@ class _repoviewState extends State<frndview> {
                     color: Colors.black,
                     child: Center(
                       child: Text(
-                        item?.name ?? "Repo name is null",
+                        item?.login ?? "friend name is null",
                         style: TextStyle(color: Colors.white),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
