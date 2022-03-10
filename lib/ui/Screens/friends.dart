@@ -3,12 +3,13 @@ import 'package:easy_github/app/data/dioclient.dart';
 
 class friends {
   String? login;
-  //avatar_url;
-  friends({required this.login});
+  String? avatar_url;
+  friends({required this.login,required this.avatar_url});
   DioClient _client = DioClient();
   static friends frommap(Map<String, dynamic> map) {
     return friends(
       login: map['login'],
+      avatar_url: map['avatar_url']
      // avatar_url: map['avatar_url'],
     );
   }
@@ -16,7 +17,7 @@ class friends {
   Map<String, dynamic>? toJson() {
     Map<String, dynamic> data = new Map<String, dynamic>();
     data['login'] = this.login;
-   // data['avatar_url'] = this.avatar_url;
+   data['avatar_url'] = this.avatar_url;
   }
 
   Future<List<friends?>> getfriends({String? username}) async {

@@ -125,10 +125,7 @@ class userDetails extends StatelessWidget {
                     InkWell(
                       splashColor: Colors.grey[10],
                       onTap: () {
-                        print("heellooooooow");
-                        Navigator.of(context).pushNamed(AppRoutes.reposs);
-                        print("hiiiiiiii");
-                      },
+                        Navigator.of(context).pushNamed(AppRoutes.reposs);                      },
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/hub.png'),
@@ -166,8 +163,8 @@ class userDetails extends StatelessWidget {
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/user.png'),
-                        height: 80,
-                        width: 80,
+                        height: 70,
+                        width: 70,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -200,8 +197,8 @@ class userDetails extends StatelessWidget {
                       child: Ink.image(
                         alignment: Alignment.bottomRight,
                         image: AssetImage('lib/assets/friends.png'),
-                        height: 80,
-                        width: 80,
+                        height: 70,
+                        width: 70,
                         fit: BoxFit.cover,
                       ),
                     ),

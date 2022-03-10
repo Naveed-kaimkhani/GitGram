@@ -18,6 +18,7 @@ class _repoviewState extends State<repoview> {
     List<repos?> reposInfo = context.watch<Userprovider>().repo;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: GestureDetector(
