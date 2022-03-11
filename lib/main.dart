@@ -20,7 +20,7 @@ class myApp extends StatelessWidget {
         brightness: Brightness.dark 
         ),
         
-        initialRoute: AppRoutes.home,
+        initialRoute: AppRoutes.well,
         onGenerateRoute: AppRoutes.onGenerateRoute,
       ),
     );

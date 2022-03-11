@@ -1,6 +1,7 @@
 import 'package:easy_github/ui/Screens/About.dart';
 import 'package:easy_github/ui/Screens/Errors.dart';
 import 'package:easy_github/ui/Screens/Homepage.dart';
+import 'package:easy_github/ui/Screens/Wellcome.dart';
 import 'package:easy_github/ui/Screens/followingview.dart';
 import 'package:easy_github/ui/Screens/friends.dart';
 import 'package:easy_github/ui/Screens/frndview.dart';
@@ -21,6 +22,7 @@ static const String frnds='/frndview';
 static const String foling='/followingview';
 static const String tabbarr='/tabbar';
 static const String homepage='/Homepage';
+static const String well='/Wellcome';
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case home:
@@ -46,6 +48,9 @@ static const String homepage='/Homepage';
         
         case homepage:
         return _buildRoute(Homepage(), settings);
+        
+        case well:
+        return _buildRoute(Wellcome(), settings);
         
       default:
         return _buildRoute(Scaffold(), settings);
