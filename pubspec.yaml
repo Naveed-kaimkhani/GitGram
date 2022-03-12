@@ -61,9 +61,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/hub.png
-    - lib/assets/user.png
-    - lib/assets/friends.png
     - lib/assets/usr.png
     - lib/assets/nwt.png
     - lib/assets/code.png

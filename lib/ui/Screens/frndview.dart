@@ -15,26 +15,7 @@ class _repoviewState extends State<frndview> {
     List<friends?> userFrnds = context.watch<Userprovider>().frnd;
 
     return Scaffold(
-      backgroundColor: Colors.black,
-        // appBar: AppBar(
-        //   elevation: 0,
-        //   backgroundColor: Colors.transparent,
-        //   leading: GestureDetector(
-        //     child: Icon(
-        //       Icons.arrow_back_ios,
-        //       color: Colors.white,
-        //     ),
-        //     onTap: () =>
-        //         Navigator.of(context).pushNamed(AppRoutes.user_details),
-        //   ),
-        //   title: Center(
-        //     child: Text(
-        //       " Followers",
-        //       style: TextStyle(fontSize: 18, fontFamily: 'Itim'),
-        //     ),
-        //   ),
-        //   actions: [],
-        // ),
+        backgroundColor: Colors.black,
         body: ListView.builder(
             itemCount: userFrnds.length,
             itemBuilder: (context, index) {

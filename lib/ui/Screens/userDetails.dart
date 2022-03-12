@@ -12,19 +12,12 @@ class userDetails extends StatelessWidget {
     user_profile? userinfo = context.watch<Userprovider>().user;
 
     return Scaffold(
-        // appBar: AppBar(
-        //   backgroundColor: Colors.black,
-        //   // leading: GestureDetector(
-        //   //   child: Icon(Icons.arrow_back_ios),
-        //   //   onTap: () => Navigator.of(context).pushNamed(AppRoutes.homepage),
-        //   // ),
-        // ),
         backgroundColor: Colors.black,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             ListTile(
                 isThreeLine: true,
@@ -47,7 +40,6 @@ class userDetails extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        // SizedBox(height: 20,),
                         Text(
                           "Repositories",
                           style: TextStyle(fontSize: 15),
@@ -157,7 +149,9 @@ class userDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: 30,),
+              SizedBox(
+                width: 30,
+              ),
               Material(
                 elevation: 8,
                 borderRadius: BorderRadius.circular(20),
@@ -176,7 +170,6 @@ class userDetails extends StatelessWidget {
                           image: AssetImage('lib/assets/usr.png'),
                           height: 70,
                           width: 70,
-                          //  fit: BoxFit.cover,
                         ),
                       ),
                     ),

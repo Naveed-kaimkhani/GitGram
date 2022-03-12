@@ -2,7 +2,6 @@ import 'package:easy_github/app/routes/AppRoutes.dart';
 import 'package:provider/provider.dart';
 import 'package:easy_github/notifier/UserProvider.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({Key? key}) : super(key: key);
@@ -19,7 +18,6 @@ class _HomepageState extends State<Homepage> {
     final TextEditingController _controller = TextEditingController();
 
     Future<void> FetchUserInfo() async {
-      //print(_controller.text);
       await context
           .read<Userprovider>()
           .getuser(username: _controller.text); //context pass nh kya
@@ -71,7 +69,6 @@ class _HomepageState extends State<Homepage> {
               SizedBox(
                 height: 150,
               ),
-            
               Container(
                 height: 40,
                 width: 150,
@@ -95,13 +92,8 @@ class _HomepageState extends State<Homepage> {
       title: Text(
         "G i t G r a m",
         style: TextStyle(
-            fontFamily: 'Open Sans',
-            fontSize: 25,
-            // fontStyle: FontStyle.italic,
-            color: Colors.grey[100]),
+            fontFamily: 'Open Sans', fontSize: 25, color: Colors.grey[100]),
       ),
-
-      // leading: _gesture(),
     );
   }
 }
