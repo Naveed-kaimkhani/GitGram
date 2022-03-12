@@ -64,6 +64,9 @@ flutter:
     - lib/assets/hub.png
     - lib/assets/user.png
     - lib/assets/friends.png
+    - lib/assets/usr.png
+    - lib/assets/nwt.png
+    - lib/assets/code.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -53,9 +53,8 @@ class _HomepageState extends State<Homepage> {
                   decoration: new InputDecoration(
                     suffix: GestureDetector(
                       child: Icon(Icons.search),
-                      onTap: () => AppRoutes.reposs,
+                      onTap: () => AppRoutes.user_details,
                     ),
-                   
                     focusColor: Colors.white,
                     hoverColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.white),
@@ -70,9 +69,9 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               SizedBox(
-                height: 220,
+                height: 150,
               ),
-              
+            
               Container(
                 height: 40,
                 width: 150,
@@ -98,7 +97,7 @@ class _HomepageState extends State<Homepage> {
         style: TextStyle(
             fontFamily: 'Open Sans',
             fontSize: 25,
-           // fontStyle: FontStyle.italic,
+            // fontStyle: FontStyle.italic,
             color: Colors.grey[100]),
       ),
 

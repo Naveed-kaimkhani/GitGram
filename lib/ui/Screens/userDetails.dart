@@ -12,19 +12,19 @@ class userDetails extends StatelessWidget {
     user_profile? userinfo = context.watch<Userprovider>().user;
 
     return Scaffold(
-    appBar: AppBar(
-      backgroundColor: Colors.black,
-      leading: GestureDetector(
-        child: Icon(Icons.arrow_back_ios),
-        onTap: () => AppRoutes.homepage,
-      ),
-    ),
+        // appBar: AppBar(
+        //   backgroundColor: Colors.black,
+        //   // leading: GestureDetector(
+        //   //   child: Icon(Icons.arrow_back_ios),
+        //   //   onTap: () => Navigator.of(context).pushNamed(AppRoutes.homepage),
+        //   // ),
+        // ),
         backgroundColor: Colors.black,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 0,
+              height: 40,
             ),
             ListTile(
                 isThreeLine: true,
@@ -121,7 +121,7 @@ class userDetails extends StatelessWidget {
             ),
             Row(children: [
               SizedBox(
-                width: 30,
+                width: 20,
               ),
               Material(
                 elevation: 8,
@@ -129,16 +129,19 @@ class userDetails extends StatelessWidget {
                 color: Colors.grey[10],
                 child: Column(
                   children: [
-                    InkWell(
-                      splashColor: Colors.grey[10],
-                      onTap: () {
-                        Navigator.of(context).pushNamed(AppRoutes.reposs);                      },
-                      child: Ink.image(
-                        alignment: Alignment.bottomRight,
-                        image: AssetImage('lib/assets/hub.png'),
-                        height: 80,
-                        width: 80,
-                        fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        splashColor: Colors.grey[10],
+                        onTap: () =>
+                            Navigator.of(context).pushNamed(AppRoutes.tabbarr),
+                        child: Ink.image(
+                          alignment: Alignment.bottomRight,
+                          image: AssetImage('lib/assets/code.png'),
+                          height: 70,
+                          width: 70,
+                          //fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Text(
@@ -154,26 +157,31 @@ class userDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                width: 30,
-              ),
+              SizedBox(width: 30,),
               Material(
                 elevation: 8,
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.grey[10],
                 child: Column(
                   children: [
-                    InkWell(
-                      splashColor: Colors.grey[10],
-                      onTap: () =>
-                          Navigator.of(context).pushNamed(AppRoutes.about),
-                      child: Ink.image(
-                        alignment: Alignment.bottomRight,
-                        image: AssetImage('lib/assets/user.png'),
-                        height: 80,
-                        width: 80,
-                        fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        // radius:8.0,
+                        splashColor: Colors.grey[10],
+                        onTap: () =>
+                            Navigator.of(context).pushNamed(AppRoutes.about),
+                        child: Ink.image(
+                          alignment: Alignment.bottomRight,
+                          image: AssetImage('lib/assets/usr.png'),
+                          height: 70,
+                          width: 70,
+                          //  fit: BoxFit.cover,
+                        ),
                       ),
+                    ),
+                    SizedBox(
+                      width: 30,
                     ),
                     Text(
                       "About",
@@ -197,16 +205,19 @@ class userDetails extends StatelessWidget {
                 color: Colors.grey[10],
                 child: Column(
                   children: [
-                    InkWell(
-                      splashColor: Colors.grey[10],
-                      onTap: () =>
-                          Navigator.of(context).pushNamed(AppRoutes.tabbarr),
-                      child: Ink.image(
-                        alignment: Alignment.bottomRight,
-                        image: AssetImage('lib/assets/friends.png'),
-                        height: 80,
-                        width: 80,
-                        fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        splashColor: Colors.grey[10],
+                        onTap: () =>
+                            Navigator.of(context).pushNamed(AppRoutes.tabbarr),
+                        child: Ink.image(
+                          alignment: Alignment.bottomRight,
+                          image: AssetImage('lib/assets/nwt.png'),
+                          height: 70,
+                          width: 70,
+                          //fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     Text(

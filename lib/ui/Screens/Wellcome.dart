@@ -11,9 +11,9 @@ class Wellcome extends StatefulWidget {
   State<Wellcome> createState() => _HomepageState();
 }
 
-class _HomepageState extends State<Wellcome> with SingleTickerProviderStateMixin{
+class _HomepageState extends State<Wellcome>{
   bool mode = true;
-
+  
   @override
   Widget build(BuildContext context) {
     final TextEditingController _controller = TextEditingController();
@@ -28,7 +28,6 @@ class _HomepageState extends State<Wellcome> with SingleTickerProviderStateMixin
             SizedBox(
               height: 90,
             ),
-            
             Container(
               height: 150,
              width: 150,
@@ -69,7 +68,7 @@ class _HomepageState extends State<Wellcome> with SingleTickerProviderStateMixin
                   ),
               ],
             isRepeatingAnimation: true,
-              totalRepeatCount: 1,
+              totalRepeatCount: 3,
               pause: Duration(milliseconds: 1000),
             ),
                ),

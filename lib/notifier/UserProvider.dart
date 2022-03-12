@@ -39,6 +39,7 @@ class Userprovider extends ChangeNotifier {
       // print(_user!.name);
       setLoading(false);
     } catch (e) {
+      //Navigator.of(context).pushNamed(AppRoutes.ErrorScreen)
       // SnackBar(
       //   content: Text(e.toString()),
       //   action: SnackBarAction(
