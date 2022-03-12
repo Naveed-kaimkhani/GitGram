@@ -12,6 +12,7 @@ class userDetails extends StatelessWidget {
     user_profile? userinfo = context.watch<Userprovider>().user;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         backgroundColor: Colors.black,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +127,7 @@ class userDetails extends StatelessWidget {
                       child: InkWell(
                         splashColor: Colors.grey[10],
                         onTap: () =>
-                            Navigator.of(context).pushNamed(AppRoutes.tabbarr),
+                            Navigator.of(context).pushNamed(AppRoutes.reposs),
                         child: Ink.image(
                           alignment: Alignment.bottomRight,
                           image: AssetImage('lib/assets/code.png'),
@@ -158,13 +159,13 @@ class userDetails extends StatelessWidget {
                 color: Colors.grey[10],
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: InkWell(
-                        // radius:8.0,
-                        splashColor: Colors.grey[10],
-                        onTap: () =>
-                            Navigator.of(context).pushNamed(AppRoutes.about),
+                    InkWell(
+                      // radius:8.0,
+                      splashColor: Colors.grey[10],
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(AppRoutes.about),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Ink.image(
                           alignment: Alignment.bottomRight,
                           image: AssetImage('lib/assets/usr.png'),
