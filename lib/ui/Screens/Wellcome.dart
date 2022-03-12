@@ -11,13 +11,13 @@ class Wellcome extends StatefulWidget {
   State<Wellcome> createState() => _HomepageState();
 }
 
-class _HomepageState extends State<Wellcome> {
+class _HomepageState extends State<Wellcome> with SingleTickerProviderStateMixin{
   bool mode = true;
 
   @override
   Widget build(BuildContext context) {
     final TextEditingController _controller = TextEditingController();
-
+   
 
     return Scaffold(
       //appBar: _appbar(),
@@ -30,10 +30,15 @@ class _HomepageState extends State<Wellcome> {
             ),
             
             Container(
-                height: 150,
-                width: 150,
-                child: Image.network(
+              height: 150,
+             width: 150,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image:NetworkImage(
                     "https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg")),
+                   )
+              ),
+                
             SizedBox(
               height: 70,
             ),
@@ -65,14 +70,14 @@ class _HomepageState extends State<Wellcome> {
               ],
             isRepeatingAnimation: true,
               totalRepeatCount: 1,
-              pause: Duration(milliseconds: 1500),
+              pause: Duration(milliseconds: 1000),
             ),
                ),
             SizedBox(
               height: 100,
             ),
             Container(
-              height: 30,
+              height: 40,
               width: 150,
               child: ElevatedButton(
                   onPressed: () => Navigator.of(context).pushNamed(AppRoutes.homepage),

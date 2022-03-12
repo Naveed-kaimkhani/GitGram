@@ -44,18 +44,18 @@ class _HomepageState extends State<Homepage> {
           child: Column(
             children: [
               SizedBox(
-                height: 50,
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: TextFormField(
                   controller: _controller,
                   decoration: new InputDecoration(
-                    prefixIcon: GestureDetector(
+                    suffix: GestureDetector(
                       child: Icon(Icons.search),
                       onTap: () => AppRoutes.reposs,
                     ),
-                    suffixIcon: Icon(Icons.cancel),
+                   
                     focusColor: Colors.white,
                     hoverColor: Colors.white,
                     hintStyle: TextStyle(color: Colors.white),
@@ -70,11 +70,9 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 220,
               ),
-              SizedBox(
-                height: 50,
-              ),
+              
               Container(
                 height: 40,
                 width: 150,

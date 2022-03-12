@@ -23,7 +23,10 @@ class _AboutState extends State<About> {
         children: <Widget>[
           SizedBox.expand(
 
-            child:Image.network(userinfo!.avatar_url??"No image",fit: BoxFit.cover,),
+            child:Image.network(userinfo!.avatar_url??"No image",fit: BoxFit.cover,
+            colorBlendMode: BlendMode.darken,
+            ),
+            
           ),
           DraggableScrollableSheet(
             initialChildSize: 0.22,
