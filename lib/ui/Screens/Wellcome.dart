@@ -45,14 +45,11 @@ class _HomepageState extends State<Wellcome> {
                       textStyle: TextStyle(
                         fontSize: 40,
                         color: Colors.white,
-                        // backgroundColor: Colors.blue
                       )),
                   RotateAnimatedText('TO',
                       textStyle: TextStyle(
                         letterSpacing: 3,
                         fontSize: 40,
-                        //fontWeight: FontWeight.bold,
-                        //color: Colors.blueAccent
                       )),
                   RotateAnimatedText(
                     'G i t G r a m',
