@@ -36,16 +36,6 @@ class Userprovider extends ChangeNotifier {
       _user = await response;
       setLoading(false);
     } catch (e) {
-      //Navigator.of(context).pushNamed(AppRoutes.ErrorScreen)
-      // SnackBar(
-      //   content: Text(e.toString()),
-      //   action: SnackBarAction(
-      //     label: 'Undo',
-      //     onPressed: () {
-      //       // Some code to undo the change.
-      //     },
-      //   ),
-      // );
 
       setLoading(false);
     }
@@ -75,7 +65,6 @@ print("_repo initialized");
     setLoading(true);
     try {
       print("get user frnds call");
-      //_repo=await _githubapi.getUserRepos(username: username
       final List<friends?> response =
           await _githubapi.getUserfriends(username: username);
       _frnd = response;
@@ -94,7 +83,6 @@ print("_repo initialized");
     setLoading(true);
     try {
       print("get user following call");
-      //_repo=await _githubapi.getUserRepos(username: username
       final List<following?> response =
           await _githubapi.getUserfolloing(username: username);
       _foling = response;
