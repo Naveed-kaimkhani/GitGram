@@ -31,12 +31,9 @@ class Userprovider extends ChangeNotifier {
   Future<void> getuser({String? username}) async {
     setLoading(true);
     try {
-      print("In try");
       final Future<user_profile?> response =
           _githubapi.getUserProfile(username: username);
       _user = await response;
-      print("user got");
-      // print(_user!.name);
       setLoading(false);
     } catch (e) {
       //Navigator.of(context).pushNamed(AppRoutes.ErrorScreen)
@@ -59,7 +56,6 @@ class Userprovider extends ChangeNotifier {
     setLoading(true);
     try {
       print("in get user repo");
-      //_repo=await _githubapi.getUserRepos(username: username
       final List<repos?> response =
           await _githubapi.getUserRepos(username: username);
       _repo = response;

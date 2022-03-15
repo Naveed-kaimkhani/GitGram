@@ -13,7 +13,6 @@ class GithubApi {
       final response = await _client.get('/${Endpoints.userprofile}/$username');
       return user_profile.fromjson(response);
     } catch (e) {
-      // DioExceptions.fromDioError(e).toString();
 
     }
   }
